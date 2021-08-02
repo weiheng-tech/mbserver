@@ -1,0 +1,12 @@
+github.com/goburrow/serial v0.1.0 h1:v2T1SQa/dlUqQiYIT8+Cu7YolfqAi3K96UmhwYyuSrA=
+github.com/goburrow/serial v0.1.0/go.mod h1:sAiqG0nRVswsm1C97xsttiYCzSLBmUZ/VSlVLZJ8haA=
+github.com/jifanchn/modbus v0.1.0 h1:yv63spxIWVyxVIn5lI55nFMAEt60R7dSEWSObEA5fY8=
+github.com/jifanchn/modbus v0.1.0/go.mod h1:tgmz7W7rY0i+wKxtertGJjwde0eukme373VUBTilOjg=
+github.com/jifanchn/modbus v0.1.1-0.20200722033430-3598b4864de5 h1:CrrAadtzZYxqtEkvpHUae0vR6lZ7zm2WubjgUhh5Ohk=
+github.com/jifanchn/modbus v0.1.1-0.20200722033430-3598b4864de5/go.mod h1:nOnCPIv6j3z3OqdNST2OagiDi2FaPeJwt2QQH8ej04g=
+github.com/jifanchn/serial v0.1.0 h1:Ilr7Na8DHXsejEpB6YnKy2O5u3lxNaADnweltt1FVXI=
+github.com/jifanchn/serial v0.1.0/go.mod h1:U/0v1g+BfmBZvkkhLgrq6KTTL9foB6q6TEDOedGS+zQ=
+github.com/jifanchn/serial v0.1.1-0.20200721133953-bfdbc382ce0e h1:RKUTusRl7IndKujAzxnbUPqT1BEoP1wXCCk5Lhev698=
+github.com/jifanchn/serial v0.1.1-0.20200721133953-bfdbc382ce0e/go.mod h1:+DsaMUtwgcr0w4yzABTToaMdMW6whgJs2GOMP+/ptFM=
+github.com/pkg/term v0.0.0-20200520122047-c3ffed290a03/go.mod h1:Z9+Ul5bCbBKnbCvdOWbLqTHhJiYV414CURZJba6L8qA=
+golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=

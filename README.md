@@ -65,7 +65,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/goburrow/modbus"
+	"github.com/jifanchn/modbus"
 )
 
 func main() {
@@ -142,7 +142,7 @@ In the following example, the Modbus server will be configured to listen on
 	defer serv.Close()
 ```
 
-Information on [serial port settings](https://godoc.org/github.com/goburrow/serial).
+Information on [serial port settings](https://godoc.org/github.com/jifanchn/serial).
 
 ## Server Customization
 
