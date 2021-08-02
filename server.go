@@ -4,6 +4,7 @@ package mbserver
 import (
 	"io"
 	"net"
+	"sync"
 
 	"github.com/jifanchn/serial"
 )
@@ -20,6 +21,7 @@ type Server struct {
 	Coils            []byte
 	HoldingRegisters []uint16
 	InputRegisters   []uint16
+	Mutex            sync.Mutex
 }
 
 // Request contains the connection and Modbus frame.
@@ -67,6 +69,8 @@ func (s *Server) handle(request *Request) Framer {
 
 	function := request.frame.GetFunction()
 	if s.function[function] != nil {
+		s.Mutex.Lock()
+		defer s.Mutex.Unlock()
 		data, exception = s.function[function](s, request.frame)
 		response.SetData(data)
 	} else {
