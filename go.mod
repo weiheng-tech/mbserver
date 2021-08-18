@@ -1,4 +1,4 @@
-module mbserver
+module github.com/jifanchn/mbserver
 
 go 1.13
 
