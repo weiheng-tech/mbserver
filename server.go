@@ -22,6 +22,8 @@ type Server struct {
 	HoldingRegisters []uint16
 	InputRegisters   []uint16
 	Mutex            sync.Mutex
+	once             sync.Once
+	closer           chan struct{}
 }
 
 // Request contains the connection and Modbus frame.
@@ -51,6 +53,7 @@ func NewServer() *Server {
 	s.function[16] = WriteHoldingRegisters
 
 	s.requestChan = make(chan *Request)
+	s.closer = make(chan struct{})
 	go s.handler()
 
 	return s
@@ -101,4 +104,5 @@ func (s *Server) Close() {
 	for _, port := range s.ports {
 		port.Close()
 	}
+	s.once.Do(func() { close(s.closer) })
 }
