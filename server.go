@@ -90,9 +90,13 @@ func (s *Server) handle(request *Request) Framer {
 // All requests are handled synchronously to prevent modbus memory corruption.
 func (s *Server) handler() {
 	for {
-		request := <-s.requestChan
-		response := s.handle(request)
-		request.conn.Write(response.Bytes())
+		select {
+		case <-s.closer:
+			return
+		case request := <-s.requestChan:
+			response := s.handle(request)
+			request.conn.Write(response.Bytes())
+		}
 	}
 }
 
